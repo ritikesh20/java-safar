@@ -1,2 +1,4 @@
 # java-safar
-java Question basic to Leetcode
+java Question basic to Leetcode 
+Author -- Hritikesh Singh
+
