@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Discount{
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+
+        int amount = 0;
+        double dis = 0;
+        System.out.print("Enter Amount :");
+        amount = input.nextInt();
+
+        if(amount >=1000 && amount <= 2000){
+             dis = amount * 0.90;
+            System.out.print("Final Bill : " + dis );
+        }
+        else if(amount >=2000 && amount <= 3000){
+            dis = amount * 0.85;
+            System.out.print("Final Bill : " + dis );
+        }
+        else if(amount >=4000 && amount <= 5000){
+            dis = amount * 0.80;
+            System.out.print("Final Bill : " + dis );
+        }
+
+
+        else{
+            System.out.println("No Discount ");
+        }
+    }
+}

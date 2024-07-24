@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class checkgrade {
+    public static void main(String [] args) {
+        Scanner input = new Scanner (System.in);
+
+        int m1 = 0, m2 = 0, m3 = 0,sum = 0;
+        double avg = 0;
+        System.out.print("\n"+"Enter M1 :");
+        m1 = input.nextInt();
+
+        System.out.print("\n"+"Enter M2 :");
+        m2 = input.nextInt();
+
+        System.out.print("\n"+"Enter M3 :");
+        m3 = input.nextInt();
+
+        sum = m1+m2+m3;
+        System.out.println("Total Marks : "+ sum);
+        avg = sum/3;
+        System.out.println("Avg : "+ avg);
+        
+        
+        if(avg >=80 && avg <=100 ){
+            System.out.print("Grade A");
+        }
+        
+        else if(avg >= 60 && avg <80){
+            System.out.print("Grade B");
+        }
+        else if(avg >=34 && avg <60){
+            System.out.print("Grade C");
+        }
+        else{
+            System.out.print("Fail" + "\n" + "Plz Try Again");
+        }
+
+
+    }
+}

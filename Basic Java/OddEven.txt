@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class oddEven{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        
+        int no = 0;
+        System.out.print("Enter No :");
+        no = input.nextInt();
+        
+        if(no % 2 == 0){
+            System.out.print("Even No");
+        }
+        else{
+            System.out.print("Odd No");
+        }
+    }
+}

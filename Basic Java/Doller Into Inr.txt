@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class usdoller{
+    public static void main (String [] args){
+        Scanner input = new Scanner (System.in);
+        
+        System.out.println("*** Doller into Indian Ruppes ***");
+        
+        int doller;
+        int currency = 80;
+        int indian_currency = 0;
+        
+        System.out.print("Enter Doller :");
+        doller = input.nextInt();
+        
+        indian_currency = doller * currency;
+        
+        System.out.print(+doller +" Doller Equal to " + indian_currency + " Indian currency");
+        
+        
+        
+    }
+}

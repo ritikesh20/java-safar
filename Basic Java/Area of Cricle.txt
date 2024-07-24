@@ -1,0 +1,17 @@
+import java.util.Scanner;
+//Area of cricle 
+public class cricle{
+    public static void main(String [] args ){
+        Scanner input = new Scanner (System.in);
+        
+        float area = 0;
+        int radius = 0;
+        float pi = 3.14f;
+        
+        System.out.print("Enter Radius :");
+        radius = input.nextInt();
+       // formul pi*r*r 
+        area = pi*radius*radius;
+        System.out.print(area);
+    }
+}

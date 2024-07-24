@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class checkgrade {
+    public static void main(String [] args) {
+        Scanner input = new Scanner (System.in);
+
+        int m1 = 0, m2 = 0, m3 = 0,sum = 0;
+        double avg = 0;
+        System.out.print("\n"+"Enter M1 :");
+        m2 = input.nextInt();
+
+        System.out.print("\n"+"Enter M2 :");
+        m2 = input.nextInt();
+
+        System.out.print("\n"+"Enter M3 :");
+        m3 = input.nextInt();
+
+        sum = m1+m2+m3;
+        System.out.println("Sum : "+ sum);
+        avg = sum/3;
+        System.out.print("Avg : "+ avg);
+
+
+    }
+}

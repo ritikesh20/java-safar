@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class MaxOftwo{
+    public static void main(String [] args){
+        Scanner input = new Scanner (System.in);
+        
+        int num1 = 0;
+        int num2 = 0;
+        
+        System.out.print("Enter Num1 :");
+        num1 = input.nextInt();
+        
+        System.out.print("Enter Num2 :");
+        num2 = input.nextInt();
+        
+        if(num1 > num2){
+            System.out.print("Max No is Num 1 : " + num1);
+        }
+        else if(num2 > num1){
+            System.out.print("Max NO is Num 2 : " + num2);
+        }
+        else {
+            System.out.print("Plz Enter Vaild No");
+        }
+        
+    }
+}

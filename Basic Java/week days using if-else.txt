@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class days{
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+
+        int days = 0;
+        System.out.print("Enter Days :");
+        days = input.nextInt();
+
+        if(days == 1){
+            System.out.print("Mondays");
+        }
+        else if (days == 2){
+            System.out.print("Tuesday");
+        }
+        else if (days == 3) {
+            System.out.print("Wednesday");
+        }
+        else if (days == 4) {
+            System.out.print("Thursday");
+        }
+        else if (days == 5) {
+            System.out.print("Friday");
+        }
+        else if (days == 6) {
+            System.out.print("Saturday");
+        }
+        else if (days == 7) {
+            System.out.println("Sunday");
+        }
+
+        else {
+            System.out.println("Plz Enter Valid ");
+        }
+    }
+}

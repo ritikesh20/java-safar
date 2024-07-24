@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class typecasting{
+    public static void main(String [] args){
+        int a = 55;
+        double ad = a;
+        System.out.print(ad+ "\n");
+        
+        double x = 45.55;
+        int z = (int) x;
+        
+        System.out.println(z);
+        
+        int num = 5;
+        char ch = (char) (num + 'A');
+        
+        System.out.print(ch);
+        
+    }
+    
+}

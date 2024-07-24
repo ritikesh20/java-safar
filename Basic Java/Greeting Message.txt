@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class greeting{
+    public static void main(String [] args){
+        Scanner input = new Scanner (System.in);
+        //System.out.print("Spark");
+         char ch;
+        System.out.print("Enter Gender :");
+        ch = input.next().charAt(0);
+        
+       if(ch == 'M' || ch == 'm' ){
+           System.out.print("Good Morning Sir");
+       }
+       else if (ch == 'f' || ch == 'F'){
+           System.out.print("Good Morning Maam");
+       }
+       
+       else {
+           System.out.print("inVaild");
+       }
+        
+    }
+}

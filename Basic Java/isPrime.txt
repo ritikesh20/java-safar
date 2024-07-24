@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class prime{
+    public static void main(String [] args){
+        Scanner input = new Scanner (System.in);
+        
+        int no = 0,count = 0;
+        System.out.print("Enter No :");
+        no = input.nextInt();
+        
+        for(int i = 1; i<=no; i++){
+            if(no % i == 0){
+                count++;
+            }
+        }
+        if(count == 2){
+            System.out.print("Prime no");
+        }
+        else {
+            System.out.print("Not A Prime NO");
+        }
+        
+    }
+}

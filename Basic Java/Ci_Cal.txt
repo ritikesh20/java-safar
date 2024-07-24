@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class CiCal {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // p r y
+        double p, r, y = 0;
+        double ans = 0;
+
+        System.out.println("Enter P");
+        p = input.nextInt();
+
+        System.out.println("Enter R");
+        r = input.nextInt();
+
+        System.out.println("Enter Y");
+        y = input.nextInt();
+
+        //“principle * (Math.pow((1 + rate / 100), time)) – principle” to calculate the
+        ans = p *(Math.pow(1 + r / 100,y)) - p;
+        System.out.println("CI :" + ans);
+    }
+}

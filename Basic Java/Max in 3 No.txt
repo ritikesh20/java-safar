@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class max{
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+        
+        int a = 0, b = 0, c = 0;
+        
+        System.out.print("\nEnter A:");
+        a = input.nextInt();
+        
+        System.out.print("\nEnter B :");
+        b = input.nextInt();
+        
+        System.out.print("\nEnter C :");
+        c = input.nextInt();
+        
+        if(a > b && a > c){
+            System.out.print("\n Max is A :" + a);
+        }
+        else if(b > a && b > c){
+            System.out.print("\n Max is B :" + b);
+        }
+        else if( c > a && c > b){
+            System.out.print("\n Max is C :" + c);
+        }
+    }
+}
