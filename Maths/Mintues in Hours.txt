@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class table{
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+        
+        int time = 936;
+        int hours = 0;
+        int mints = 0;
+            
+        hours = time/60;
+        mints = time % 60;
+        
+        System.out.print(hours +" Hours" + " " + mints +" Mints");
+        
+        
+    }
+}

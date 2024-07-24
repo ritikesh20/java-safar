@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class digitsplus{
+    public static  void main(String [] args){
+        Scanner input = new Scanner(System.in);
+
+        int no = 0;
+        int rev = 0;
+        int sum = 0;
+        System.out.println("Enter NO :");
+        no = input.nextInt();
+
+        while (no > 0){
+            int x = no % 10;
+           // rev = rev * 10 + x;
+            sum = sum + x;
+            no = no/10;
+        }
+       //System.out.println(rev);
+        System.out.println("Sum :" + sum);
+    }
+}

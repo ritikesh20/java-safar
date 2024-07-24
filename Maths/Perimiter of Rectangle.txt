@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class perimiter {
+    public static void main(String [] args){
+        Scanner input = new Scanner (System.in);
+        int length = 0;
+        int width = 0;
+
+        System.out.print("Enter Length :");
+        length = input.nextInt();
+
+        System.out.print("Enter Width");
+        width = input.nextInt();
+
+        int area = length * width;
+        int p_meter = 2 *(length + width);
+
+        System.out.println("Area : "+ area);
+        System.out.println("Perimiter : " + p_meter);
+    }
+}

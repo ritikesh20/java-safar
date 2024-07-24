@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class swapToWithExtraVari {
+    public static void main(String [] args){
+        Scanner input = new Scanner (System.in);
+        int a = 0, b = 0;
+        System.out.print("Enter No A :");
+        a = input.nextInt();
+
+        System.out.print("Enter No B :");
+        b = input.nextInt();
+
+        System.out.println("Before Swap \n"+ "A :" + a + "\nB :" + b  );
+
+       a = a + b;
+       b = a - b;
+       a = a - b;
+
+        System.out.println("After Swap \n"+ "A :" + a + "\nB :" + b  );
+    }
+}

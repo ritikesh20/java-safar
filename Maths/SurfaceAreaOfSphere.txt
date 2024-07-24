@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class SurfaceAreaOfSphere{
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+     
+        double area = 0;
+        double pi = 3.14;
+        int radius = 0;
+        
+        System.out.print("Enter Radius :");
+        radius = input.nextInt();
+        
+        area = 4*pi*radius*radius;
+        
+        System.out.print("Area = " + area);
+        
+        
+        
+    }
+}

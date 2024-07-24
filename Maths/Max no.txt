@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class oddeven{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        
+        int a,b;
+        
+        System.out.print("Enter A");
+        a = input.nextInt();
+        
+        System.out.print("Enter B");
+        b = input.nextInt();
+        
+        if(a == b){
+            System.out.print("A is Equal To B");
+        }
+        
+        else if(a > b) {
+            System.out.print("A is Grater Than B");
+        }
+        
+        else if(b > a){
+            System.out.print("B is Max");
+        }
+        
+        else {
+            System.out.print("Plz Enter Vaild No");
+        }
+        
+        }
+    }
+

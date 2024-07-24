@@ -1,0 +1,11 @@
+public class NthSum {
+    public static void main(String[] args) {
+        int no = 10;
+
+        int ans = 0;
+
+        ans = (no * (no + 1))/2;
+
+        System.out.println(ans);
+    }
+}
