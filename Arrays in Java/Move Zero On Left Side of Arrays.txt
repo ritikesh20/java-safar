@@ -1,0 +1,25 @@
+import java.util.Arrays;
+
+public class moveZoerOnLeftSide {
+    public static void main(String[] args) {
+
+     
+        int [] arr = {1,2,3,0,9,0,7,9};
+        int start = 0;
+        int end = arr.length-1;
+
+        while (start<end){
+            if(arr[end] == 0 ){
+                int temp = arr[start];
+                arr[start] = arr[end];
+                arr[end] = temp;
+                start++;
+                end--;
+            }
+            else{
+                end--;
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+}

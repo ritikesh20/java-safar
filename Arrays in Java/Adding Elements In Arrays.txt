@@ -1,0 +1,41 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+import java.util.Scanner;
+
+public class AddingElemetnsInArrays {
+    public AddingElemetnsInArrays() {
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter Size :");
+        int size = input.nextInt();
+        int[] arr = new int[size + 1];
+        System.out.println("Enter Array :");
+
+        int i;
+        for(i = 0; i < size; ++i) {
+            arr[i] = input.nextInt();
+        }
+
+        System.out.println("Position :");
+        int pos = input.nextInt();
+        System.out.println("Enter Data :");
+        int data = input.nextInt();
+
+        for(i = size; i > pos; --i) {
+            arr[i] = arr[i - 1];
+        }
+
+        arr[pos] = data;
+        ++size;
+
+        for(i = 0; i < size; ++i) {
+            System.out.print(arr[i] + " ");
+        }
+
+    }
+}

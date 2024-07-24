@@ -1,0 +1,26 @@
+public class MaxMinSub {
+    public static void main(String[] args) {
+
+        int [] arr = {14,20,35,6,7};
+        int max = arr[0];
+        int min = arr[0];
+
+        for (int i = 0; i<arr.length; i++){
+            if(max < arr[i]){
+                max = arr[i];
+            }
+        }
+        System.out.print("Max :"+max);
+
+        for (int i = 0; i<arr.length; i++){
+            if(min > arr[i]){
+                 min = arr[i];
+            }
+        }
+        System.out.println();
+        System.out.print("Min :"+min);
+        System.out.println();
+        int ans = max - min;
+        System.out.println("Ans :"+ans);
+    }
+}
