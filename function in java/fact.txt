@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class fact{
+    public static int fact(int no){
+        
+        int fact = 1;
+        for(int i = 1; i<=no; i++){
+            fact = fact * i;
+        }
+        return fact;
+        
+    }
+    
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+        
+        int no = 0;
+        
+        System.out.print("Enter NO :");
+        no = input.nextInt();
+        
+        int ans = fact (no);
+        
+        System.out.print(ans);
+        
+    }
+}

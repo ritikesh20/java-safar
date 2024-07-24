@@ -1,0 +1,15 @@
+public class product{
+    public static int cal(int a, int b){
+        int mul = a * b;
+        return mul;
+    }
+    public static void main(String [] args){
+        int a = 5;
+        int b = 3;
+        int mul;
+        
+        mul = cal(a, b);
+        
+        System.out.print(mul);
+    }
+}

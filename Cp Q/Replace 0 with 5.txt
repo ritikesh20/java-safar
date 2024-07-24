@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class helloN{
+    public static  void main(String [] args){
+        Scanner input = new Scanner(System.in);
+
+        int no = 10004;
+        System.out.println("No :" + no);
+        int rev = 0;
+
+        int re = 0;
+
+        while (no > 0){
+            int x = no % 10;
+            if(x == 0){
+                x = 5;
+            }
+             rev = rev * 10 + x;
+             no = no/10;
+        }
+        System.out.println("Rev No :"+ rev);
+
+        int pd = rev;
+        System.out.println("PD :" + pd);
+        while (pd>0){
+            int y = pd % 10;
+            re = re * 10 + y;
+            pd = pd/10;
+        }
+        System.out.println("New pd :" + re);
+
+    }
+}
