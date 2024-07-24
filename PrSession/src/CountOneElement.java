@@ -1,0 +1,21 @@
+public class CountOneElement {
+    public static void main(String[] args) {
+
+        int [] arr =  {11,12,13,141,15};
+       int k = 1;
+       int count = 0;
+
+        for (int i = 0; i<arr.length; i++){
+
+            while (arr[i]>0){
+                int x = arr[i] % 10;
+                if(x == k){
+                    count++;
+                }
+                arr[i] = arr[i] / 10;
+            }
+        }
+
+        System.out.println(count);
+    }
+}
