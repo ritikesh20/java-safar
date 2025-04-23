@@ -1,72 +1,64 @@
-package com.example.weatherapp;
+package com.example.wokingnotification;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import androidx.core.app.NotificationCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText etCity;
-    Button btnGetWeather;
-    TextView tvResult;
-
-    String BASE_URL = "https://api.openweathermap.org/data/2.5/";
-    String API_KEY = "d4f89a278f449917407116ed2c070315";  // yahan apni key dalna
+    private static final String CHANNEL_ID = "sales_channel";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etCity = findViewById(R.id.etCity);
-        btnGetWeather = findViewById(R.id.btnGetWeather);
-        tvResult = findViewById(R.id.tvResult);
+        Button btnSendNotification = findViewById(R.id.button);
 
-        btnGetWeather.setOnClickListener(view -> {
-            String city = etCity.getText().toString().trim();
-            if (!city.isEmpty()) {
-                getWeatherData(city);
-            }
+        CreateNotificationChannel();
+
+        btnSendNotification.setOnClickListener(v -> {
+            sendNotification();
         });
+
     }
 
-    private void getWeatherData(String city) {
+    void sendNotification() {
 
-        WeatherApi api = RetrofitClient.getClient(BASE_URL).create(WeatherApi.class);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
+                .setContentTitle("Big Sales is Here")
+                .setContentText("Hey You Got 30 % discount")
+                .setSmallIcon(R.drawable.nightmode)
+                .setPriority(NotificationCompat.PRIORITY_HIGH);;
 
-        Call<WeatherResponse> call = api.getWeather(city, API_KEY, "metric");
+        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        manager.notify(1, builder.build());
+    }
 
-        call.enqueue(new Callback<WeatherResponse>() {
-            @Override
-            public void onResponse(Call<WeatherResponse> call, Response<WeatherResponse> response) {
-                if (response.isSuccessful() && response.body() != null) {
-                    WeatherResponse data = response.body();
-                    String info = "City: " + data.getName() +
-                            "\nTemp: " + data.getMain().getTemp() + "°C" +
-                            "\nHumidity: " + data.getMain().getHumidity() + "%" +
-                            "\nMinimum" + data.getMain().getTemp_min() +
-                            "\nMix Temp" + data.getMain().getTemp_max() +
-                            "\nWind Speed" + data.getWind().getSpeed();
+    void CreateNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
-                    tvResult.setText(info);
-                } else {
-                    tvResult.setText("City not found!");
-                }
-            }
+            CharSequence name = "Sales Notification";
+            String description = "Channel for sales alerts";
 
-            @Override
-            public void onFailure(Call<WeatherResponse> call, Throwable t) {
-                tvResult.setText("Error: " + t.getMessage());
-            }
-        });
+            int importance = NotificationManager.IMPORTANCE_HIGH;
 
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
+            channel.setDescription(description);
+
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+
+        }
     }
 }
 
